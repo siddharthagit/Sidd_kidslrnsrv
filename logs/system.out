@@ -1,0 +1,102 @@
+CompilerOracle: exclude jregex/Pretokenizer.next
+Listening for transport dt_socket at address: 49898
+15:09:31,199 INFO  ~ Starting /Users/siddhartha/SiddXCode/tools/play-1.2.5.3/SiddFirstApp
+15:09:31,632 WARN  ~ You're running Play! in DEV mode
+15:09:31,698 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+15:17:01,868 ERROR ~ Unable to set localhost. This prevents creation of a GUID. Cause was: bhasi02mac1337: bhasi02mac1337: nodename nor servname provided, or not known
+java.net.UnknownHostException: bhasi02mac1337: bhasi02mac1337: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1473)
+	at net.sf.ehcache.Cache.<clinit>(Cache.java:200)
+	at net.sf.ehcache.config.ConfigurationHelper.createCache(ConfigurationHelper.java:302)
+	at net.sf.ehcache.config.ConfigurationHelper.createDefaultCache(ConfigurationHelper.java:218)
+	at net.sf.ehcache.CacheManager.configure(CacheManager.java:599)
+	at net.sf.ehcache.CacheManager.init(CacheManager.java:358)
+	at net.sf.ehcache.CacheManager.<init>(CacheManager.java:299)
+	at net.sf.ehcache.CacheManager.create(CacheManager.java:697)
+	at play.cache.EhCacheImpl.<init>(EhCacheImpl.java:31)
+	at play.cache.EhCacheImpl.newInstance(EhCacheImpl.java:41)
+	at play.cache.Cache.init(Cache.java:241)
+	at play.Play.start(Play.java:522)
+	at play.Play.detectChanges(Play.java:630)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at play.server.PlayHandler$NettyInvocation.init(PlayHandler.java:189)
+	at play.Invoker$Invocation.run(Invoker.java:276)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:229)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:292)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.net.UnknownHostException: bhasi02mac1337: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:901)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1293)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1469)
+	... 23 more
+15:17:02,028 ERROR ~ Cannot connected to the database : Unknown database 'hrikit_dev'
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'hrikit_dev'
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:951)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1717)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1276)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2395)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:109)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:525)
+	at play.Play.start(Play.java:526)
+	at play.Play.detectChanges(Play.java:630)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+15:17:02,604 ERROR ~ 
+
+@6hodm9jlo
+Internal Server Error (500) for request GET /
+
+Database error
+A database error occured : Cannot connected to the database, Unknown database 'hrikit_dev'
+
+play.exceptions.DatabaseException: Cannot connected to the database, Unknown database 'hrikit_dev'
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:161)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:525)
+	at play.Play.start(Play.java:526)
+	at play.Play.detectChanges(Play.java:630)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'hrikit_dev'
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:951)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1717)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1276)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2395)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:109)
+	... 5 more
+15:17:22,715 INFO  ~ Connected to jdbc:mysql://localhost/hrikit_dev?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+15:17:23,342 INFO  ~ Application 'SiddFirstApp' is now started !
+15:33:00,704 INFO  ~ Connected to jdbc:mysql://localhost/hrikit_dev?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci

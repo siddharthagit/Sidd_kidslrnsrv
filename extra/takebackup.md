@@ -1,0 +1,1 @@
+mysqldump -u root -p --databases DB_NAME >databasename.sql
